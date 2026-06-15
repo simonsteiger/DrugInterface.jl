@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "DrugInterface.jl"
-  text: "A trait interface for rheumatology drugs"
+  text: "A trait interface for drugs"
   tagline: A small type lattice plus required and derived predicates for classifying anti-rheumatic drugs.
   actions:
     - theme: brand
@@ -25,6 +25,15 @@ features:
   - title: Implementation-agnostic
     details: Any struct can satisfy the interface by defining the primitive methods — no concrete types are imposed.
 ---
+```
+
+## Installation
+
+This package is not yet registered. Add it via URL:
+
+```julia
+using Pkg
+Pkg.add(url = "https://github.com/simonsteiger/DrugInterface.jl")
 ```
 
 ## Overview
