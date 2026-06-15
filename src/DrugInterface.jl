@@ -104,7 +104,7 @@ Return `true` if `d` is any DMARD (conventional synthetic, biologic, or targeted
 synthetic), i.e. [`is_csdmard`](@ref)`(d) || `[`is_btsdmard`](@ref)`(d)`. Derived
 automatically from the primitives.
 """
-is_dmard(d::AbstractAntiRheumaticDrug)    = is_csdmard(d) || is_btsdmard(d)
+is_dmard(d::AbstractAntiRheumaticDrug) = is_csdmard(d) || is_btsdmard(d)
 
 # ---- universal derived helper ----
 

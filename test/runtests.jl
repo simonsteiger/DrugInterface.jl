@@ -11,16 +11,16 @@ struct StubDrug <: AbstractAntiRheumaticDrug
     cortisone::Bool
 end
 
-DrugInterface.substance(d::StubDrug)      = d.name
+DrugInterface.substance(d::StubDrug) = d.name
 DrugInterface.mode_of_action(d::StubDrug) = d.moa
-DrugInterface.is_csdmard(d::StubDrug)     = d.csdmard
-DrugInterface.is_bdmard(d::StubDrug)      = d.bdmard
-DrugInterface.is_tsdmard(d::StubDrug)     = d.tsdmard
-DrugInterface.is_cortisone(d::StubDrug)   = d.cortisone
+DrugInterface.is_csdmard(d::StubDrug) = d.csdmard
+DrugInterface.is_bdmard(d::StubDrug) = d.bdmard
+DrugInterface.is_tsdmard(d::StubDrug) = d.tsdmard
+DrugInterface.is_cortisone(d::StubDrug) = d.cortisone
 
-mtx  = StubDrug("Methotrexate", :none, true,  false, false, false)
-ada  = StubDrug("Adalimumab",   :TNFi, false, true,  false, false)
-tof  = StubDrug("Tofacitinib",  :JAKi, false, false, true,  false)
+mtx = StubDrug("Methotrexate", :none, true, false, false, false)
+ada = StubDrug("Adalimumab", :TNFi, false, true, false, false)
+tof = StubDrug("Tofacitinib", :JAKi, false, false, true, false)
 pred = StubDrug("Prednisolone", :none, false, false, false, true)
 
 @testset "DrugInterface" begin
