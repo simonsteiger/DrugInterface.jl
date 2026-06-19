@@ -14,7 +14,7 @@ function getBaseRepository(base: string): string {
 }
 
 const baseTemp = {
-  base: '/02_outcomes/',// TODO: replace this in makedocs!
+  base: '/DrugInterface.jl/',// TODO: replace this in makedocs!
 }
 
 const navTemp = {
@@ -36,14 +36,14 @@ const nav = [
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/02_outcomes/',// TODO: replace this in makedocs!
+  base: '/DrugInterface.jl/',// TODO: replace this in makedocs!
   title: 'DrugInterface.jl',
-  description: 'Documentation for 02_outcomes',
+  description: 'Documentation for DrugInterface.jl',
   lastUpdated: true,
   cleanUrls: true,
   outDir: '../1', // This is required for MarkdownVitepress to work correctly...
   head: [
-    
+    ['link', { rel: 'icon', href: `${baseTemp.base}favicon.ico` }],
     ['script', {src: `${getBaseRepository(baseTemp.base)}versions.js`}],
     // ['script', {src: '/versions.js'], for custom domains, I guess if deploy_url is available.
     ['script', {src: `${baseTemp.base}siteinfo.js`}]
@@ -66,7 +66,7 @@ export default defineConfig({
       mathjax.vitePlugin,
     ],
     define: {
-      __DEPLOY_ABSPATH__: JSON.stringify('/02_outcomes'),
+      __DEPLOY_ABSPATH__: JSON.stringify('/DrugInterface.jl'),
     },
     resolve: {
       alias: {
@@ -90,7 +90,7 @@ export default defineConfig({
   },
   themeConfig: {
     outline: 'deep',
-    
+    logo: { src: '/logo.svg', width: 24, height: 24},
     search: {
       provider: 'local',
       options: {
@@ -106,9 +106,9 @@ export default defineConfig({
 ]
 ,
     sidebarDrawer: false,
-    editLink: { pattern: "https://https://github.com/simonsteiger/02_outcomes/edit/main/docs/src/:path" },
+    editLink: { pattern: "https://https://github.com/simonsteiger/DrugInterface.jl/edit/main/docs/src/:path" },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/simonsteiger/02_outcomes' }
+      { icon: 'github', link: 'https://github.com/simonsteiger/DrugInterface.jl' }
     ],
     footer: {
       message: 'Made with <a href="https://luxdl.github.io/DocumenterVitepress.jl/dev/" target="_blank"><strong>DocumenterVitepress.jl</strong></a><br>',

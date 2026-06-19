@@ -25,7 +25,7 @@ Subtypes must implement the universal interface:
 See also [`AbstractAntiRheumaticDrug`](/api#DrugInterface.AbstractAntiRheumaticDrug).
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/02_outcomes" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/DrugInterface.jl/blob/ceb72fa9a11475458b5b33bf626c373215fd5408/src/DrugInterface.jl#L5-L17" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -52,7 +52,7 @@ Anti-rheumatic branch of the lattice. In addition to the [`AbstractDrug`](/api#D
 The derived predicates [`is_btsdmard`](/api#DrugInterface.is_btsdmard) and [`is_dmard`](/api#DrugInterface.is_dmard) come for free from these primitives.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/02_outcomes" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/DrugInterface.jl/blob/ceb72fa9a11475458b5b33bf626c373215fd5408/src/DrugInterface.jl#L20-L33" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -71,7 +71,7 @@ substance(d::AbstractDrug)
 Return the active substance of `d` (for example `"Methotrexate"`). Required of every [`AbstractDrug`](/api#DrugInterface.AbstractDrug); there is no default implementation.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/02_outcomes" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/DrugInterface.jl/blob/ceb72fa9a11475458b5b33bf626c373215fd5408/src/DrugInterface.jl#L38-L43" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -88,7 +88,7 @@ mode_of_action(d::AbstractDrug)
 Return the mode of action of `d` as a `Symbol` (for example `:TNFi`, `:JAKi`, or `:none`). Required of every [`AbstractDrug`](/api#DrugInterface.AbstractDrug); there is no default implementation.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/02_outcomes" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/DrugInterface.jl/blob/ceb72fa9a11475458b5b33bf626c373215fd5408/src/DrugInterface.jl#L46-L52" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -105,7 +105,7 @@ is_csdmard(d::AbstractAntiRheumaticDrug)
 Return `true` if `d` is a conventional synthetic DMARD (csDMARD). Required primitive of every [`AbstractAntiRheumaticDrug`](/api#DrugInterface.AbstractAntiRheumaticDrug); no default.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/02_outcomes" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/DrugInterface.jl/blob/ceb72fa9a11475458b5b33bf626c373215fd5408/src/DrugInterface.jl#L57-L62" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -122,7 +122,7 @@ is_bdmard(d::AbstractAntiRheumaticDrug)
 Return `true` if `d` is a biologic DMARD (bDMARD). Required primitive of every [`AbstractAntiRheumaticDrug`](/api#DrugInterface.AbstractAntiRheumaticDrug); no default.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/02_outcomes" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/DrugInterface.jl/blob/ceb72fa9a11475458b5b33bf626c373215fd5408/src/DrugInterface.jl#L65-L70" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -139,7 +139,7 @@ is_tsdmard(d::AbstractAntiRheumaticDrug)
 Return `true` if `d` is a targeted synthetic DMARD (tsDMARD). Required primitive of every [`AbstractAntiRheumaticDrug`](/api#DrugInterface.AbstractAntiRheumaticDrug); no default.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/02_outcomes" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/DrugInterface.jl/blob/ceb72fa9a11475458b5b33bf626c373215fd5408/src/DrugInterface.jl#L73-L78" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -156,7 +156,7 @@ is_cortisone(d::AbstractAntiRheumaticDrug)
 Return `true` if `d` is a cortisone / glucocorticoid. Required primitive of every [`AbstractAntiRheumaticDrug`](/api#DrugInterface.AbstractAntiRheumaticDrug); no default.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/02_outcomes" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/DrugInterface.jl/blob/ceb72fa9a11475458b5b33bf626c373215fd5408/src/DrugInterface.jl#L81-L86" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -175,7 +175,7 @@ is_btsdmard(d::AbstractAntiRheumaticDrug)
 Return `true` if `d` is a biologic _or_ targeted synthetic DMARD, i.e. [`is_bdmard`](/api#DrugInterface.is_bdmard)`(d) ||`[`is_tsdmard`](/api#DrugInterface.is_tsdmard)`(d)`. Derived automatically from the primitives; concrete types do not implement this.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/02_outcomes" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/DrugInterface.jl/blob/ceb72fa9a11475458b5b33bf626c373215fd5408/src/DrugInterface.jl#L91-L97" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -192,7 +192,7 @@ is_dmard(d::AbstractAntiRheumaticDrug)
 Return `true` if `d` is any DMARD (conventional synthetic, biologic, or targeted synthetic), i.e. [`is_csdmard`](/api#DrugInterface.is_csdmard)`(d) ||`[`is_btsdmard`](/api#DrugInterface.is_btsdmard)`(d)`. Derived automatically from the primitives.
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/02_outcomes" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/DrugInterface.jl/blob/ceb72fa9a11475458b5b33bf626c373215fd5408/src/DrugInterface.jl#L100-L106" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 
@@ -209,7 +209,7 @@ is_substance(d::AbstractDrug, name)
 Return `true` if the active substance of `d` equals `name`, i.e. [`substance`](/api#DrugInterface.substance)`(d) == name`. Works for any [`AbstractDrug`](/api#DrugInterface.AbstractDrug).
 
 
-<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/02_outcomes" target="_blank" rel="noreferrer">source</a></Badge>
+<Badge type="info" class="source-link" text="source"><a href="https://github.com/simonsteiger/DrugInterface.jl/blob/ceb72fa9a11475458b5b33bf626c373215fd5408/src/DrugInterface.jl#L111-L116" target="_blank" rel="noreferrer">source</a></Badge>
 
 </details>
 

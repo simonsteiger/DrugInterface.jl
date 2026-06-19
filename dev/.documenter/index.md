@@ -3,8 +3,10 @@ layout: home
 
 hero:
   name: "DrugInterface.jl"
-  text: "A trait interface for drugs"
-  tagline: A small type lattice plus required and derived predicates for classifying anti-rheumatic drugs.
+  tagline: "A unified interface for working with ATC codes"
+  image:
+    src: logo.svg
+    alt: DrugInterface
   actions:
     - theme: brand
       text: Getting Started
