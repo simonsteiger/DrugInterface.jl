@@ -5,15 +5,13 @@ using Documenter, DocumenterVitepress
 DocMeta.setdocmeta!(DrugInterface, :DocTestSetup, :(using DrugInterface); recursive = true)
 
 makedocs(;
-    modules = [DrugInterface],
-    authors = "Simon Steiger",
-    repo = "https://github.com/simonsteiger/02_outcomes",
     sitename = "DrugInterface.jl",
+    authors = "Simon Steiger",
+    modules = [DrugInterface],
     format = DocumenterVitepress.MarkdownVitepress(
-        repo = "https://github.com/simonsteiger/02_outcomes",
+        repo = "https://github.com/simonsteiger/DrugInterface.jl",
         devbranch = "main",
         devurl = "dev",
-        build_vitepress = true,
     ),
     pages = [
         "Home" => "index.md",
@@ -25,7 +23,8 @@ makedocs(;
 )
 
 DocumenterVitepress.deploydocs(;
-    repo = "github.com/simonsteiger/02_outcomes",
+    repo = "github.com/simonsteiger/DrugInterface.jl",
+    target=joinpath(@__DIR__, "build"),
     devbranch = "main",
     push_preview = true,
 )
