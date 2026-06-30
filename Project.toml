@@ -1,7 +1,7 @@
 name = "DrugInterface"
 uuid = "ecbac44d-373e-48a5-bcbb-08f349367545"
 authors = ["Simon Steiger"]
-version = "0.1.0"
+version = "0.2.0"
 
 [compat]
 julia = "1.11"
