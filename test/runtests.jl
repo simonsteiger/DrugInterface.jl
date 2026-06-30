@@ -23,6 +23,16 @@ ada = StubDrug("Adalimumab", :TNFi, false, true, false, false)
 tof = StubDrug("Tofacitinib", :JAKi, false, false, true, false)
 pred = StubDrug("Prednisolone", :none, false, false, false, true)
 
+# Minimal AbstractDrug stub — only substance + mode_of_action required
+struct PlainStubDrug <: AbstractDrug end
+DrugInterface.substance(::PlainStubDrug) = "Unknown"
+DrugInterface.mode_of_action(::PlainStubDrug) = :none
+
+struct AnonymousStubDrug <: AbstractDrug end
+DrugInterface.substance(::AnonymousStubDrug) = "Unknown"
+DrugInterface.mode_of_action(::AnonymousStubDrug) = :none
+DrugInterface.is_anonymous(::AnonymousStubDrug) = true
+
 @testset "DrugInterface" begin
     @testset "lattice" begin
         @test AbstractAntiRheumaticDrug <: AbstractDrug
@@ -47,5 +57,10 @@ pred = StubDrug("Prednisolone", :none, false, false, false, true)
         @test is_dmard(ada)              # btsDMARD ⇒ DMARD
         @test is_substance(mtx, "Methotrexate")
         @test !is_substance(mtx, "Adalimumab")
+    end
+
+    @testset "is_anonymous" begin
+        @test !is_anonymous(PlainStubDrug())        # default false holds
+        @test is_anonymous(AnonymousStubDrug())     # override works
     end
 end
