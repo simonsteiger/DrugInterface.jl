@@ -116,9 +116,19 @@ Return `true` if the active substance of `d` equals `name`, i.e.
 """
 is_substance(d::AbstractDrug, name) = substance(d) == name
 
+"""
+    is_anonymous(d::AbstractDrug) -> Bool
+
+Return `true` if `d` carries drug-class information but no concrete substance
+identity — e.g. a record known to be a csDMARD whose exact substance is
+unresolvable. Defaults to `false` for every [`AbstractDrug`](@ref); identity-less
+fallback types override it.
+"""
+is_anonymous(d::AbstractDrug) = false
+
 export AbstractDrug, AbstractAntiRheumaticDrug
 export substance, mode_of_action
 export is_csdmard, is_bdmard, is_tsdmard, is_cortisone
-export is_btsdmard, is_dmard, is_substance
+export is_btsdmard, is_dmard, is_substance, is_anonymous
 
 end # module
