@@ -4,4 +4,5 @@ DocumenterVitepress = "4710194d-e776-4893-9690-8d956a29c365"
 DrugInterface = "ecbac44d-373e-48a5-bcbb-08f349367545"
 
 [compat]
+Documenter = "1.19.0"
 DocumenterVitepress = "0.3.5"
